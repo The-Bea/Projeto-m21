@@ -1,0 +1,129 @@
+@import 'variaveis';
+
+@import 'mixin';
+
+
+
+// Estilização do hero
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(rgba(0,0,0,0.6), $cor-bg-deep), url('../images/Casita-Encanto.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+
+    &__content {
+        @include glass-effect;
+        padding: 40px;
+        max-width: 800px;
+    }
+
+    &__button {
+        background: $gradiente-magico;
+        border: none;
+        padding: 15px 30px;
+        border-radius: 50px;
+        color: white;
+        font-weight: bold;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        transition: $transition-smooth;
+        box-shadow: 0 0 20px rgba(214, 51, 132, 0.4);
+
+        &:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 40px rgba(214, 51, 132, 0.6);
+        }
+    }
+}
+
+//  Estilização do Header
+.header {
+    background-color: $cor-isabela-purple;
+    padding: 20px 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__logo {
+        margin: 0;
+        font-size: 2.5rem;
+    }
+
+    &__menu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+    &__item a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        transition: $transition-smooth;
+
+        &:hover {
+            color: $cor-gold;
+            text-shadow: 0 0 8px $cor-gold;
+        }
+    }
+}
+
+//  Personagens e os Cards 
+.personagem-card {
+    @include porta-magica; // O efeito que flutua!
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+
+    img {
+        width: 100%;
+        max-width: 30vw;       
+        height: 50vh;     // Altura fixa para os posters
+        object-fit: cover; // Corta sem distorcer
+        border-radius: 15px;
+        
+    }
+    h6 {
+        text-align: center;
+    }
+}
+
+// casita
+.casita {
+    display: flex;
+    align-items: center;
+    border: 4px dotted gold;
+    max-width: 50%;
+    margin: 0 auto;
+
+    p {
+        font-size: 1.2rem;
+        padding: 15px;
+        text-align: justify;
+        line-height: 1.7;
+        
+    }
+
+    h2 {
+        text-align: center;
+    }
+}
+
+
+//  Ajustes de Títulos
+h2 {
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+

@@ -1,0 +1,36 @@
+@import 'variaveis';
+
+@mixin porta-magica {
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: $transition-smooth;
+
+    &:hover {
+        transform: translateY(-10px) scale(1.03);
+        border-color: $cor-gold;
+        box-shadow: $shadow-magica;
+        filter: brightness(1.2);
+    }
+}
+
+@mixin flex-centralizado {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+body {
+    background-color: $cor-bg-deep; 
+    color: white;
+    font-family: $font-disney;
+    margin: 0;
+    padding: 0;
+}
+
+@mixin glass-effect {
+    background: $glass-bg;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid $glass-border;
+    border-radius: 20px;
+}

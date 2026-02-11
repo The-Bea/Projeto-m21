@@ -5,42 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link  rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../dist/css/main.css">
 </head>
 <body>
-    <header>
-        <div>
-            <nav>
-                <ul class="menu__opcoes">
-                    <li>Inicio</li>
-                    <li>Meus filmes</li>
-                    <li>Novos filmes</li>
-                    <li>Favoritos</li>
+    
+    <header class="header">
+        <div class="container"> <nav class="header__nav">
+                <h1 class="header__logo" style="color: #ffc107;">Encanto</h1>
+                <ul class="header__menu">
+                    <li class="header__item"><a href="#familia">A Família</a></li>
+                    <li class="header__item"><a href="#casita">A Casita</a></li>
+                    <li class="header__item"><a href="#">Trilha Sonora</a></li>
                 </ul>
             </nav>
         </div>
-        
     </header>
-    <div class="filmes row">
-        <div class="col-3">
-            <img src="https://placehold.co/150x200" alt=""/>
+    
+    <section class="hero">
+        <div class="hero__content">
+            <h1 class="display-2 fw-bold text-warning">A Magia te Espera</h1>
+            <p class="lead mb-4">Descubra os dons da Família Madrigal nesta experiência imersiva.</p>
+            <button class="hero__button">Assistir Trailer</button>
         </div>
-        <div class="col-3">
-            <img src="https://placehold.co/150x200" alt=""/>
-        </div>
-        <div class="col-3">
-            <img src="https://placehold.co/150x200" alt=""/>
-        </div>
-        <div class="col-3">
-            <img src="https://placehold.co/150x200" alt=""/>
-        </div>
-        <div class="col-3">
-            <img src="https://placehold.co/150x200" alt=""/>
-        </div>
-        <div class="col-3">
-            <img src="https://placehold.co/150x200" alt=""/>
-        </div>
-    </div>
+    </section>
 
+    <main id="familia" class="container">
+        <h2 class="text-center " style="color: white;">Personagens Mágicos</h2>
+        <div class="row">
+            <div class="col-md-4 col-lg-auto col-sm-auto personagem-card">
+                <img src="./dist/images/bruno.jpg" alt="Bruno">
+                <h6>Bruno</h6>
+            </div>
+            <div class="col-md-4 col-lg-auto col-sm-auto  personagem-card">
+                <img src="./dist/images/dolores.jpg" alt="Dolores">
+                <h6>Dolores</h6>
+            </div>
+            <div class="col-md-4 col-lg-auto col-sm-auto personagem-card">
+                <img src="./dist/images/mirabel.jpg" alt="Mirabel">
+                <h6>Mirabel</h6>
+            </div>
+            <div class="col-md-4 col-lg-auto col-sm-auto personagem-card">
+                <img src="./dist/images/Profile_-_Isabela_Madrigal.webp" alt="Isabela">
+                <h6>Isabela</h6>
+            </div>
+            <div class="col-md-4 col-lg-auto col-sm-auto personagem-card">
+                <img src="./dist/images/pepa.jpg" alt="Pepa">
+                <h6>Pepa</h6>
+            </div>
+            <div class="col-md-4 col-lg-auto col-sm-auto personagem-card">
+                <img src="./dist/images/antonio.jpg" alt="Antonio">
+                <h6>Antonio</h6>
+            </div>
+            <div class="col-md-4 col-lg-auto col-sm-auto personagem-card">
+                <img src="./dist/images/Julieta.webp" alt="Julieta">
+                <h6>Julieta</h6>
+            </div>
+            <div class="col-md-4 col-lg-auto col-sm-auto personagem-card">
+                <img src="./dist/images/luisa.jpeg" alt="Luisa">
+                <h6>Luisa</h6>
+            </div>
+        </div>
+    </main>
+    <section id="casita" class="casita">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 ">
+                    <h2 class="casita__titulo">A Casita Madrigal</h2>
+                    <p class="casita__texto">
+                        Mais do que apenas uma construção, a Casita é um membro vivo da Família Madrigal. 
+                        Ela responde aos sentimentos dos moradores, move seus ladrilhos para ajudar nas tarefas 
+                        e protege a vela mágica que sustenta o Encanto.
+                    </p>
+                    <p class="casita__texto">
+                        Cada quarto é um mundo fantástico, refletindo o dom único de quem o habita.
+                    </p>
+                </div>
+                
+                <div class="col-md-6">
+                    <div class="casita__imagem-container">
+                        <img src="./dist/images/Casita-Encanto.jpg" alt="A Casita Madrigal" class="img-fluid casita__foto">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
