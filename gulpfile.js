@@ -3,6 +3,7 @@ const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
 const sourcemaps = require('gulp-sourcemaps');
+const replace = require('gulp-replace');
 
 function styles () {
     return gulp.src('./src/styles/*.scss')
@@ -18,12 +19,10 @@ function images () {
 
 function comprimeHtml() {
     return gulp.src('./src/*.html')
-    .pipe(htmlmin({ 
-            collapseWhitespace: true,
-            removeComments: true
-        }))
+        .pipe(replace('@@ENDERECO_DO_CSS', './css/main.css')) 
+        .pipe(htmlmin({ collapseWhitespace: true, removeComments: true })) 
         .pipe(gulp.dest('./dist'));
-    }
+}
 
 function compilaSass() {
     return gulp.src('./src/styles/*.scss')
@@ -32,7 +31,6 @@ function compilaSass() {
         .pipe(sourcemaps.write('./maps')) 
         .pipe(gulp.dest('./dist/css'));
 }
-
 
 exports.default = gulp.parallel(styles, images, comprimeHtml, compilaSass);
 
